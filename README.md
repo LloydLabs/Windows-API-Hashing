@@ -5,7 +5,7 @@ If you're not familiar with the PE format, take a look at this diagram from Micr
 
 ![EAT diagram](https://i.imgur.com/u9RXQQd.gif)
 
-So, every DLL in theory **should** have an export table where the functions that it implements are exposed to the loader - in order for an application for example to use one of the exported functions. This information resides in the EAT (export address table).
+So, every DLL in theory **should** have an export table where the functions that it implements are exposed to the loader - in order for an application to use one of the exported functions. This information resides in the EAT (export address table).
 
 When you traditionally compile an executable and implicitly use for example `MessageBox`, the compiler will add this to this to the IAT, this will contain the module (DLL) that the symbol resides in too.
 
