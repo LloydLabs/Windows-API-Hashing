@@ -111,11 +111,6 @@ BOOL resolve_find(PRESOLVE_ENTRY pEntry)
 	for (DWORD i = 0; i < pIED->AddressOfFunctions; i++)
 	{
 		UINT32 u32FuncHash = resolve_hash_name((LPCSTR)RESOLVE_REL_CALC(hLibrary, pdwNames[i]));
-		if (u32FuncHash == 0)
-		{
-			continue;
-		}
-
 		if (u32FuncHash == pEntry->u32Hash)
 		{
 			pEntry->lpAddr = (PVOID)RESOLVE_REL_CALC(hLibrary, pdwAddress[pwOrd[i]]);
