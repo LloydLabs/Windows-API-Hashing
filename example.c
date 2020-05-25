@@ -26,8 +26,8 @@ int main(int argc, char** argv)
 	// resolve the entire table
 	if (resolve_init(&rtExampleTbl, 2))
 	{
-		_Beep Beep = (_Beep)rtExampleTbl.reEntries[1].lpAddr;
-		Beep(750, 500);
+		_Beep pBeep = (_Beep)rtExampleTbl.reEntries[1].lpAddr;
+		pBeep(750, 500);
 	}
 
 	// create a hash for RtlCreateUserThread
