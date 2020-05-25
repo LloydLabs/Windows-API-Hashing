@@ -1,5 +1,4 @@
-#ifndef RESOLVE_H
-#define RESOLVE_H
+#pragma once
 
 #include <Windows.h>
 
@@ -19,5 +18,3 @@ typedef struct RESOLVE_TABLE {
 BOOL resolve_find(PRESOLVE_ENTRY pEntry);
 BOOL resolve_init(PRESOLVE_TABLE pTbl, SIZE_T uCount);
 UINT32 resolve_hash_name(LPCSTR cszName);
-
-#endif
